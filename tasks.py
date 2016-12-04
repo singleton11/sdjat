@@ -11,10 +11,7 @@ def lock(ctx, upgrade=False):
     if upgrade:
         upgrade_str = '-U'
 
-    ctx.run(
-        'pip-compile {upgrade_str} requirements.in --output-file '
-        'requirements.txt'.format(upgrade_str=upgrade_str)
-    )
+    ctx.run('pip-compile {upgrade_str}'.format(upgrade_str=upgrade_str))
 
 
 @task
