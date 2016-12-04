@@ -9,16 +9,15 @@ class AppGenerationTestCase(TestCase):
     """Test case for app generation"""
 
     def tearDown(self):
-        sh.rm('-rf', '/tmp/polls')
+        sh.rm('-rf', 'polls')
 
     def test_generation(self):
         """Test standard app generation"""
-        cookiecutter('../', no_input=True, output_dir='/tmp',
-                     overwrite_if_exists=True)
+        cookiecutter('../', no_input=True, overwrite_if_exists=True)
 
         file_list = (
             (
-                sh.ls('/tmp/polls'),
+                sh.ls('polls'),
                 (
                     'apps.py',
                     '__init__.py',
@@ -26,7 +25,7 @@ class AppGenerationTestCase(TestCase):
                 )
             ),
             (
-                sh.ls('/tmp/polls/tests'),
+                sh.ls('polls/tests'),
                 (
                     '__init__.py',
                     'test_models.py'
