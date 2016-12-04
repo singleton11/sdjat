@@ -1,5 +1,5 @@
 {
-  "app_name": "polls",
+  "app_name": "Polls",
   "app_slug": "{{ cookiecutter.app_name.lower()|replace(' ', '_')|replace('-', '_') }}",
   "app_camel_case": "{{cookiecutter.app_slug.split('_')|map('title')|join('')}}"
 }
