@@ -1,6 +1,9 @@
 Simple django app template
 ==========================
 
+.. image:: https://travis-ci.org/singleton11/sdjat.svg?branch=master
+    :target: https://travis-ci.org/singleton11/sdjat
+
 A very simple django app template.
 
 To use this cookiecutter you should type:
